@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{6212bec5-3be9-4f32-8164-c7098a38d253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\SimpleFactory">
+      <UniqueIdentifier>{33ca784b-cf4b-4c38-a2c7-02baf05f3253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\FactoryFunction">
+      <UniqueIdentifier>{90b5b695-34d1-4b45-a5d7-2d7978a1388d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\AbstractFactory">
+      <UniqueIdentifier>{e9129024-75d1-456b-95d7-31707f0a66d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Goods">
+      <UniqueIdentifier>{2c74cbe8-c04b-457d-adff-4fccd86bf059}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Goods.cpp">
+      <Filter>Factory\Goods</Filter>
+    </ClCompile>
+    <ClCompile Include="Potato.cpp">
+      <Filter>Factory\Goods</Filter>
+    </ClCompile>
+    <ClCompile Include="Tomatoes.cpp">
+      <Filter>Factory\Goods</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFactory.cpp">
+      <Filter>Factory\SimpleFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryFucntion.cpp">
+      <Filter>Factory\FactoryFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractFactory.cpp">
+      <Filter>Factory\AbstractFactory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Goods.h">
+      <Filter>Factory\Goods</Filter>
+    </ClInclude>
+    <ClInclude Include="Potato.h">
+      <Filter>Factory\Goods</Filter>
+    </ClInclude>
+    <ClInclude Include="Tomatoes.h">
+      <Filter>Factory\Goods</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFactory.h">
+      <Filter>Factory\SimpleFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryFucntion.h">
+      <Filter>Factory\FactoryFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractFactory.h">
+      <Filter>Factory\AbstractFactory</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
