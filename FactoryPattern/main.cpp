@@ -9,9 +9,11 @@
 
 #include "FactoryFucntion.h"
 
+#include "AbstractFactory.h"
+
+
 #define SimpleFactotyTest(ClassName,type)\
 	{\
-	printf("SimpleFactoryTest Begin\n");\
 		ClassName val; \
 		pgoods = val.create(type); \
 		if (pgoods != nullptr)\
@@ -19,7 +21,6 @@
 		pgoods->PrintMsg(); \
 		val.destroy(pgoods); \
 		}\
-	printf("SimpleFactoryTest End\n"); \
 	}\
 	
 
@@ -35,18 +36,29 @@
 		}\
 	}\
 
+#define AbstractFactoryTest(ClassName)\
+	{\
+		ClassName val; \
+		pgoods = val.create();\
+		if (pgoods != nullptr)\
+		{\
+		pgoods->PrintMsg();\
+		val.destroy(pgoods);\
+		}\
+		pgoods = val.create_a(); \
+		if (pgoods != nullptr)\
+		{\
+		pgoods->PrintMsg(); \
+		val.destroy(pgoods); \
+		}\
+	}\
+
 int main(int argc, char** argv)
 {
 
 	CGoods* pgoods = nullptr;
 	// 简单工程模式测试
 	
-	/*
-		goods_type_potato
-		goods_type_potato_a
-		goods_type_tomatoes
-		goods_type_tomatoes_a
-	*/
 	/*
 	CSimpleFactory simplefactory;
 	pgoods = simplefactory.create(goods_type_potato_a);
@@ -80,8 +92,10 @@ int main(int argc, char** argv)
 	FactotyFunctionTest(CFactoryTomatoes);
 	FactotyFunctionTest(CFactoryTomatoesA);
 
+	// 抽象工厂方法 测试
 
-
+	AbstractFactoryTest(CTomatoesFactory);
+	AbstractFactoryTest(CPotatoFactory);
 
 	system("pause");
 	return 0;

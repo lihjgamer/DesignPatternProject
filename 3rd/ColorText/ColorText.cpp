@@ -4,24 +4,40 @@
 #include <stdarg.h>
 #include <string.h>
 
+#pragma warning(disable:4996)
+
 using namespace std;
 #ifdef USE_COLOR_TEXT
-	CColorText g_clr_output;
+	CColorText g_clr_output(out_put_to_console);
 #endif
 
-CColorText::CColorText(void)
+
+#define MAX_STRING_BUF 1024
+
+CColorText::CColorText()
 {
 #ifdef WIN32
 	 hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 #endif
 
-	 type = out_put_to_file;
-	 if (type == out_put_to_file || type == out_put_to_both)
-	 {
-		 m_out_put_file.open("log.log",ios::out);
-	 }
+	 type = out_put_to_console;
+	 m_pStringBuf = new char[MAX_STRING_BUF];
+}
 
-	 m_pStringBuf = new char[1024];
+// 构造函数 默认 以 可读/可写/追加 方式打开文件 如果想使用情况方式 可以设置模式为 std::ios::in|std::ios::out|std::ios::trunc 覆盖原有文件
+CColorText::CColorText(OutPutType outputtype,const char* filename /*= "log.log"*/,std::ios_base::openmode  opentype /*= std::ios::in|std::ios::out|std::ios::app*/)
+{
+#ifdef WIN32
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+#endif
+
+	type = outputtype;
+	if (type == out_put_to_file || type == out_put_to_both)
+	{
+		m_out_put_file.open(filename,opentype);
+	}
+
+	m_pStringBuf = new char[MAX_STRING_BUF];
 }
 
 CColorText::~CColorText(void)
@@ -36,21 +52,17 @@ CColorText::~CColorText(void)
 	
 	if (m_pStringBuf != NULL)
 	{
-		free(m_pStringBuf);
+		delete []m_pStringBuf;
 		m_pStringBuf = NULL;
 	}
 }
 
 void CColorText::PrintMsg(int nClrIndex,const char* format,...)
 {
-	if(nClrIndex < 0 || nClrIndex >= 4)
-	{
-		return;
-	}
+	nClrIndex = (nClrIndex < 0 || nClrIndex > DEFAULT_COLOR_MSG) ? DEFAULT_COLOR_MSG : nClrIndex;
 
 	va_list args;
 	int     len;
-
 
 	va_start( args, format );
 	len = vsnprintf(NULL, 0, format, args ) + 1;
@@ -76,9 +88,9 @@ void CColorText::PrintMsg(int nClrIndex,const char* format,...)
 		31,32,34,37,
 	};
 	
-	// sprintf 不允许内存重叠  // Modified By lihj 2015-10-10 12:09:09
-	sprintf(m_pStringBuf,"\033[%dm%s\033[0m\n",clrlist[nClrIndex],m_pStringBuf);
-	printf("%s",m_pStringBuf);
-
-#endif 
+	// sprintf 不允许 内存重叠
+	char sztemp[1024] = {0};
+	sprintf(sztemp,"\033[%d;1m%s\033[0m",clrlist[nClrIndex],m_pStringBuf);
+	printf("%s",sztemp);
+#endif
 }
