@@ -1,6 +1,6 @@
 #pragma once
 
-#define TEST_API
+#define TEST_DEQUE
 
 class CDeque
 {
@@ -13,11 +13,12 @@ public:
 	void push_back(int val);
 	void push_front(int val);
 
-	void pop_back();
-	void pop_front();
+	int  pop_back();
+	int  pop_front();
 
-#ifdef TEST_API
+#ifdef TEST_DEQUE
 	void printdeque();
+	static void test();
 #endif
 
 
