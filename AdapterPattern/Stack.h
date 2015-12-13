@@ -16,6 +16,6 @@ public:
 	~CStack();
 
 private:
-	CDeque m_deque;
+	CDeque<int> m_deque;
 };
 

@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	//_CrtSetBreakAlloc(217594);
 
 	printf("deque test\n");
-	CDeque::test();
+	CDeque<int>::test();
 
 	printf("stack test\n");
 	CStack::test();

@@ -27,9 +27,6 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Deque.cpp">
-      <Filter>Deque</Filter>
-    </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Queue</Filter>
     </ClCompile>
