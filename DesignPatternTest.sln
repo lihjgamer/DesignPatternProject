@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FactoryPattern", "FactoryPa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingletonPattern", "SingletonPattern\SingletonPattern.vcxproj", "{18C7F7F3-EDDA-4F03-9CF7-B159A6BC85C7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdapterPattern", "AdapterPattern\AdapterPattern.vcxproj", "{76BDB5BD-B6C4-4D21-B88E-0443ECE2D07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{18C7F7F3-EDDA-4F03-9CF7-B159A6BC85C7}.Debug|Win32.Build.0 = Debug|Win32
 		{18C7F7F3-EDDA-4F03-9CF7-B159A6BC85C7}.Release|Win32.ActiveCfg = Release|Win32
 		{18C7F7F3-EDDA-4F03-9CF7-B159A6BC85C7}.Release|Win32.Build.0 = Release|Win32
+		{76BDB5BD-B6C4-4D21-B88E-0443ECE2D07F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76BDB5BD-B6C4-4D21-B88E-0443ECE2D07F}.Debug|Win32.Build.0 = Debug|Win32
+		{76BDB5BD-B6C4-4D21-B88E-0443ECE2D07F}.Release|Win32.ActiveCfg = Release|Win32
+		{76BDB5BD-B6C4-4D21-B88E-0443ECE2D07F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
