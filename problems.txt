@@ -1,0 +1,5 @@
+记录一些遇到的问题
+1、关于使用模板（必须实例化后，才可以调用其中的函数）
+http://blog.csdn.net/pongba/article/details/19130
+2、__VA_ARGS__ 参数的bug
+在linux 下 当参数为空时，会出错，需要加 ##
