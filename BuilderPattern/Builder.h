@@ -5,7 +5,7 @@ class CBuilder
 {
 public:
 	CBuilder();
-	~CBuilder();
+	virtual ~CBuilder();
 	
 	virtual void create_head(CPerson &person) = 0;
 	virtual void create_arm(CPerson &person) = 0;
