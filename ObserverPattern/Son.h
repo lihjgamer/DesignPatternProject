@@ -10,7 +10,5 @@ public:
 	~CSon();
 
 	virtual void update(unsigned long timestamp);
-
-
 };
 

@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <time.h>
+
+/*
+	简单介绍：
+	本文列举了 父亲和儿子
+	父亲比较关心儿子的成长
+
+	因此父亲作为观察者，当儿子长大后，回通知父亲
+
+*/
 
 //#include "BaseRole.h"
 //#include "Observer.h"
@@ -15,6 +23,9 @@ int main(int argc, char* argv[])
 	CDaddy daddy("father", 2, 30);
 
 	son.register_observer(&daddy);
+	// son.unregister_observer(&daddy);
+	// son.unregister_observer(0);
+	// son.unregister_all_observer();
 
 	long long ulcurrtime = time(NULL);
 	long long ulpretime = ulcurrtime;
