@@ -1,6 +1,10 @@
 #pragma once
 #include <list>
 class CObserver;
+
+/*
+	被观察者 基类
+*/
 class CObserverMgr
 {
 public:
