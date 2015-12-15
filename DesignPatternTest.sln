@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdapterPattern", "AdapterPa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuilderPattern", "BuilderPattern\BuilderPattern.vcxproj", "{669F4661-912C-4EDD-ACA3-D85579E1728D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ObserverPattern", "ObserverPattern\ObserverPattern.vcxproj", "{7F1D9EE0-2DD8-496C-9F87-3C1DD25E147C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{669F4661-912C-4EDD-ACA3-D85579E1728D}.Debug|Win32.Build.0 = Debug|Win32
 		{669F4661-912C-4EDD-ACA3-D85579E1728D}.Release|Win32.ActiveCfg = Release|Win32
 		{669F4661-912C-4EDD-ACA3-D85579E1728D}.Release|Win32.Build.0 = Release|Win32
+		{7F1D9EE0-2DD8-496C-9F87-3C1DD25E147C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F1D9EE0-2DD8-496C-9F87-3C1DD25E147C}.Debug|Win32.Build.0 = Debug|Win32
+		{7F1D9EE0-2DD8-496C-9F87-3C1DD25E147C}.Release|Win32.ActiveCfg = Release|Win32
+		{7F1D9EE0-2DD8-496C-9F87-3C1DD25E147C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
