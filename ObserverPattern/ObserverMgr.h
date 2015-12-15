@@ -1,6 +1,6 @@
 #pragma once
 #include <list>
-#include "Observer.h"
+class CObserver;
 class CObserverMgr
 {
 public:

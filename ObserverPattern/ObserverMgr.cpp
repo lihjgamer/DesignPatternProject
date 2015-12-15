@@ -1,5 +1,5 @@
 #include "ObserverMgr.h"
-
+#include "Observer.h"
 
 CObserverMgr::CObserverMgr()
 {

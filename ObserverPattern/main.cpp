@@ -3,8 +3,8 @@
 
 #include <time.h>
 
-#include "BaseRole.h"
-#include "Observer.h"
+//#include "BaseRole.h"
+//#include "Observer.h"
 #include "Son.h"
 #include "Daddy.h"
 
