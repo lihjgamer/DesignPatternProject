@@ -5,20 +5,29 @@
 int main(int argc, char* argv[])
 {
 
-	CDeque<int> qq;
-
-	qq.push_back(1);
-	qq.push_back(2);
-	qq.push_front(3);
-	qq.push_front(4);
-	qq.push_front(5);
-	qq.push_front(6);
-	qq.push_back(7);
+	CDeque<int*> qq;
 
 
-	for (int v = qq.first(); !qq.end(); v = qq.next())
+	int parray[10] = { 0 };
+	for (int i = 0; i < 10; i ++)
 	{
-		printf("%d\n", v);
+		parray[i] = i;
+	}
+
+
+	qq.push_front(parray + 3);
+	qq.push_front(parray + 4);
+	qq.push_front(parray + 5);
+	qq.push_front(parray + 6);
+
+	qq.push_back(parray + 7);
+	qq.push_back(parray + 1);
+	qq.push_back(parray + 2);
+
+
+	for (int* v = qq.first(); !qq.end(); v = qq.next())
+	{
+		printf("%d\n", *v);
 	}
 
 	system("pause");
